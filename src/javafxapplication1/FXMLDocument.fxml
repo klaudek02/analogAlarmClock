@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Program">
+            <items>
+              <MenuItem fx:id="closeButton" mnemonicParsing="false" onAction="#closeApp" text="Zamknij" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Budzik">
+            <items>
+              <MenuItem fx:id="addButton" mnemonicParsing="false" onAction="#newWindow" text="Dodaj" />
+              <MenuItem fx:id="cleanButton" mnemonicParsing="false" onAction="#cleanAlarms" text="Wyczyść" />
+            </items>
+          </Menu>
+          <Menu fx:id="authorButton" mnemonicParsing="false">
+               <graphic>
+                  <Label fx:id="authorLabel" onMouseClicked="#authorWindow" prefHeight="14.0" prefWidth="56.0" text="O autorze" textAlignment="CENTER" />
+               </graphic>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <StackPane fx:id="mainPane" prefHeight="374.0" prefWidth="445.0" HBox.hgrow="ALWAYS" />
+            <AnchorPane>
+               <children>
+                  <ListView fx:id="alarmsList" layoutX="-26.0" layoutY="94.0" prefHeight="375.0" prefWidth="174.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem fx:id="deleteFromList" mnemonicParsing="false" onAction="#removeAlarm" text="Usuń" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </ListView>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

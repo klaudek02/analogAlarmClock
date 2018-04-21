@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="192.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.AuthorWindowController">
+   <children>
+      <Label layoutX="24.0" layoutY="40.0" text="Klaudiusz">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="85.0" text="Duda">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="128.0" fitWidth="180.0" layoutX="155.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Koala.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
